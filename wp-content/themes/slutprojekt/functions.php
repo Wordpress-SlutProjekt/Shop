@@ -43,6 +43,21 @@ add_theme_support('widgets');
 
     add_action( 'wp_enqueue_scripts', 'css_files');
 
+    function js_files(){
+        wp_enqueue_script('bootsstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js ', array('jquery'));
+        wp_enqueue_script('jquery.min', get_template_directory_uri() . '/js/jquery-3.3.1.min.js ', array('jquery'));
+        wp_enqueue_script('jquery-ui.min', get_template_directory_uri() . '/js/jquery-ui.min.js ', array('jquery'));
+        wp_enqueue_script('jquery.count.min', get_template_directory_uri() . '/js/jquery.countdown.min.js ', array('jquery'));
+        wp_enqueue_script('magnific.min', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js ', array('jquery'));
+        wp_enqueue_script('nicescroll.min', get_template_directory_uri() . '/js/jquery.nicescroll.min.js ', array('jquery'));
+        wp_enqueue_script('slicknav.min', get_template_directory_uri() . '/js/jquery.slicknav.js ', array('jquery'));
+        wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js ', array('jquery'));
+        wp_enqueue_script('mix', get_template_directory_uri() . '/js/mixitup.min.js ', array('jquery'));
+        wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.min.js ', array('jquery'));
+
+    }
+    add_action('wp_enqueue_scripts', 'js_files');
+
 
 
 
