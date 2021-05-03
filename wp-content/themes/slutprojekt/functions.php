@@ -19,6 +19,8 @@ add_action('after_setup_theme', 'register_shop_menu');
 
 //Footer widgets
 
+
+
 register_sidebar(
     [
         'name' => 'Footer column 1',
@@ -141,6 +143,15 @@ register_sidebar(
     }
     add_action( 'admin_enqueue_scripts', 'fix_gmaps_api_key' );
 
+
+/* header menus */
+
+function register_menus() {
+    register_nav_menu('header-menu', 'header-meny');
+    
+    }
+    
+    add_action('after_setup_theme', 'register_menus');
 
 
 ?>
