@@ -1,2 +1,22 @@
 2021-05-03T11:30:24+00:00 CRITICAL syntax error, unexpected end of file in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/woocommerce/single-product/product-attributes.php on line 93
 
+2021-05-03T13:27:49+00:00 CRITICAL Uncaught Error: Call to undefined function acf_get_setting() in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/functions.php:138
+Stack trace:
+#0 /Users/shahinfarzane/Desktop/Shop/wp-includes/class-wp-hook.php(292): fix_gmaps_api_key('divi_page_et_su...')
+#1 /Users/shahinfarzane/Desktop/Shop/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/shahinfarzane/Desktop/Shop/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#3 /Users/shahinfarzane/Desktop/Shop/wp-admin/admin-header.php(102): do_action('admin_enqueue_s...', 'divi_page_et_su...')
+#4 /Users/shahinfarzane/Desktop/Shop/wp-admin/admin.php(239): require_once('/Users/shahinfa...')
+#5 {main}
+  thrown in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/functions.php on line 138
+
+2021-05-03T14:10:34+00:00 CRITICAL syntax error, unexpected end of file in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/single.php on line 147
+
+2021-05-03T16:14:48+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-shop.php:248
+Stack trace:
+#0 /Users/shahinfarzane/Desktop/Shop/wp-includes/template-loader.php(106): include()
+#1 /Users/shahinfarzane/Desktop/Shop/wp-blog-header.php(19): require_once('/Users/shahinfa...')
+#2 /Users/shahinfarzane/Desktop/Shop/index.php(17): require('/Users/shahinfa...')
+#3 {main}
+  thrown in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-shop.php on line 248
+
