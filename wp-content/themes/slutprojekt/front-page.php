@@ -18,12 +18,10 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories__item set-bg" data-setbg="wp-content/themes/slutprojekt/img/categories/category-2.jpg">
-                            <div class="categories__text">
-                                <h4>Men’s fashion</h4>
-                                <p>358 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
+                          
+                          <?php
+                           get_template_part( 'category-loop', get_post_format() );
+                          ?>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories__item set-bg" data-setbg="wp-content/themes/slutprojekt/img/categories/category-3.jpg">
