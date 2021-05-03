@@ -23,13 +23,13 @@
 define( 'DB_NAME', 'wp_projekt_grupp1' );
 
 /** MySQL database username */
-define( 'DB_USER', 'shahinfarzane' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'shahinfarzane1' );
+define( 'DB_PASSWORD', 'root' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'mysql.shahinfarzane.com' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );

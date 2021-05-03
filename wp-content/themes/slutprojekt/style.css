@@ -2,3 +2,16 @@
 Theme Name: Slutprojekt
 Description: Tema för vårt slutprojket i Wordpress!
 */
+
+
+
+
+  .single-post .type-post .wp-post-image {
+    margin: 0 auto 0.5em;
+    display: flex;
+    text-align:center;
+
+
+
+}
+
