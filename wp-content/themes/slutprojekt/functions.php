@@ -5,6 +5,15 @@ add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('widgets');
 
+/* header menus */
+
+function register_menus() {
+    register_nav_menu('header-menu', 'header-meny');
+    
+    }
+
+    add_action('after_setup_theme', 'register_menus');
+    
 //Footer menus
 
 function register_shop_menu(){
@@ -19,6 +28,11 @@ add_action('after_setup_theme', 'register_shop_menu');
 
 //Footer widgets
 
+register_sidebar(
+    [
+        'name' => 'Footer column 1',
+@@ -142,5 +144,14 @@ register_sidebar(
+    add_action( 'admin_enqueue_scripts', 'fix_gmaps_api_key' );
 
 
 register_sidebar(
@@ -26,8 +40,9 @@ register_sidebar(
         'name' => 'Footer column 1',
         'Desription' => 'Footer column 1 info and payment',
         'id' => 'footercolumnone',
-        'before_title' => '<p>',
-        'after_title' => '</p>',
+        'class' => 'no-border',
+        'before_title' => '<h6>',
+        'after_title' => '</h6>',
         'before_widget' => false,
     ]
     );
@@ -59,6 +74,17 @@ register_sidebar(
         'name' => 'Footer column 4',
         'Desription' => 'Footer column 4 newsletter social media',
         'id' => 'footercolumnfour',
+        'before_title' => '<h6>',
+        'after_title' => '</h6>',
+        'before_widget' => false,
+    ]
+    );
+
+register_sidebar(
+    [
+        'name' => 'Footer bottom',
+        'Desription' => 'Footer bottom with copyright text',
+        'id' => 'footercolumnbottom',
         'before_title' => '<p>',
         'after_title' => '</p>',
         'before_widget' => false,

@@ -609,5 +609,10 @@
     </div>
 </div>
 <!-- Instagram End -->
+
+<?php
+get_footer();
+?>
+
 <?php
 wp_footer();
