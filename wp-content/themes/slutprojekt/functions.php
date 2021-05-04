@@ -28,12 +28,6 @@ add_action('after_setup_theme', 'register_shop_menu');
 
 //Footer widgets
 
-register_sidebar(
-    [
-        'name' => 'Footer column 1',
-@@ -142,5 +144,14 @@ register_sidebar(
-    add_action( 'admin_enqueue_scripts', 'fix_gmaps_api_key' );
-
 
 register_sidebar(
     [
