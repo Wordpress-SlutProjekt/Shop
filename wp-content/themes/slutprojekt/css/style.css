@@ -1247,7 +1247,9 @@ ol {
 .product__hover li a {
 	font-size: 18px;
 	color: #111111;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 45px;
 	width: 45px;
 	background: #ffffff;
