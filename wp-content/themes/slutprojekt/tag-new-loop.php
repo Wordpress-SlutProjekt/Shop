@@ -15,7 +15,7 @@ $query = new WP_Query( array(
             $categories = array();
             if ($query->have_posts()){
             while ( $query->have_posts() ) : $query->the_post(); 
-                        
+            echo 'banan';          
                             
                             $product = wc_get_product( get_the_ID() );
                             $price = $product->get_price();
