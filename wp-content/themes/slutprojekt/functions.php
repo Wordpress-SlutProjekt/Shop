@@ -11,6 +11,7 @@ add_theme_support('woocommerce');
 function register_menus() {
     register_nav_menu('header-menu', 'header-meny');
     
+    
     }
 
     add_action('after_setup_theme', 'register_menus');
@@ -28,7 +29,21 @@ add_action('after_setup_theme', 'register_shop_menu');
 
 
 //Footer widgets
+register_sidebar(
 
+    [
+
+       'name' => 'search',
+
+       'Description' => 'top_bar_search',
+
+       'id' => 'search_bar', 
+
+       'before_widget' => ' ',
+
+    ]
+
+);
 
 register_sidebar(
     [
@@ -186,5 +201,7 @@ register_sidebar(
         return $title;
     }
     add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
+
+    
 
 ?>
