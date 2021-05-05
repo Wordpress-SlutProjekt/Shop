@@ -18,6 +18,6 @@
 
 
 get_header();
-
+echo "hej";
 
 ?>
