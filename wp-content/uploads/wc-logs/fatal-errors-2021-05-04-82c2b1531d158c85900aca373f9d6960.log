@@ -1,8 +1,0 @@
-2021-05-04T06:27:24+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Webutveckling\e-handel\wordpress\examination\wp-content\plugins\advanced-custom-fields-pro\includes\fields\class-acf-field-email.php on line 3
-
-2021-05-04T07:22:26+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Webutveckling\e-handel\wordpress\examination\wp-includes\Requests\Transport\cURL.php on line 163
-
-2021-05-04T13:09:48+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Webutveckling\e-handel\wordpress\examination\wp-admin\includes\class-wp-filesystem-direct.php on line 82
-
-2021-05-04T13:10:53+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Webutveckling\e-handel\wordpress\examination\wp-admin\includes\class-wp-filesystem-direct.php on line 82
-
