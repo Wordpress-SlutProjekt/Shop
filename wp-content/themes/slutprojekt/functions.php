@@ -180,6 +180,12 @@ register_sidebar(
     add_action( 'admin_enqueue_scripts', 'fix_gmaps_api_key' );
 
 
+/* header menus */
+
+function register_menus() {
+    register_nav_menu('header-menu', 'header-meny');
+    register_nav_menu( 'category-menu' , 'Kategorimeny' );
+    
     function wpdocs_filter_wp_title( $title, $sep ) {
         global $paged, $page;
      
@@ -203,5 +209,6 @@ register_sidebar(
     add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
 
     
+
 
 ?>
