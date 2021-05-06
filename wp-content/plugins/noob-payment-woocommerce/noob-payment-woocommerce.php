@@ -21,14 +21,20 @@ function noob_payment_init(){
               public function __construct(){
                   $this->id = "noob_payment";
 
-                  $this->icon = apply_filters( "woocommerce_noob_icon", plugins_url() . "/assets/icon.png" );
+                  $this->icon = apply_filters( "woocommerce_noob_icon", plugins_url("/assets/icon.png", __FILE__));
                   
                   $this->has_fields = false;
-                  $this->method_title = __("Payment cash", "noob-pay-woo");
+                  $this->method_title = __("Payment Invoice", "noob-pay-woo");
                   $this->method_description = __("local payment system.", "noob-pay-woo");
+
+                  $this->title = $this->get_option("title");
+                  $this->description = $this->get_option("description");
+                  $this->instruction = $this->get_option("instruction");
                   
                   $this->init_form_fields();
                   $this->init_settings();
+
+                  add_action( "woocommerce_update_options_payment_gateways_" . $this->id, array($this, "process_admin_option"));
 
               }
                
@@ -41,13 +47,52 @@ function noob_payment_init(){
                      'title' => array(
                         "title" => __("Noob Payments Gateway", "noob-pay-woo"),
                         "type" => "text",
-                        "default" => __("Pay with cash on delivery", "noob-pay-woo"),
+                        "default" => __("Pay with invoice", "noob-pay-woo"),
                         "desc_tip " => true,
                         "description" => __("add a new title", "noob-pay-woo"),
                         
                     ),
+                    'instructions' => array(
+                        "title" => __("Intructions", "noob-pay-woo"),
+                        "type" => "textarea",
+                        "default" => __("", "noob-pay-woo"),
+                        "desc_tip " => true,
+                        "description" => __("Kommer att visas på thank you page", "noob-pay-woo"),
+                        
+                    ),
+                    'description' => array(
+                        "title" => __("Description", "noob-pay-woo"),
+                        "type" => "textarea",
+                        "default" => __("Please remit your payment to the shop to allow for the delivery", "noob-pay-woo"),
+                        "desc_tip " => true,
+                        "description" => __("", "noob-pay-woo"),
+                        
+                    ),
                 ));
 
+            }
+
+            public function process_payment( $order_id ){
+                $order = wc_get_order( $order_id );
+
+                $order->update_status( "on-hold" ,__("Awaiting Noob Payment" ,"noob-pay-woo"));
+
+                $this->clear_payment_with_api();
+
+                $order->reduce_order_stock();
+
+                WC()->cart->empty_cart();
+
+                return array(
+                    "result" => "successs",
+                    "redirect" => $this->get_return_url($order)
+
+                ); 
+
+            }
+
+            public function clear_payment_with_api(){
+                
             }
          }
      }
