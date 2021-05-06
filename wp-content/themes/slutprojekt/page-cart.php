@@ -1,5 +1,5 @@
 <?php get_header();?>
-
+<?php wp_head(); ?>
 <section>
     <div class="container">
         <div class="row">
