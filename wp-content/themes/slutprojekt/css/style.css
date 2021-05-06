@@ -26,6 +26,14 @@
 10.  Footer Style
 -------------------------------------------------------------------*/
 
+
+/* custom css */
+
+.section-cart {
+	margin-top: 50px;
+}
+
+
 /*----------------------------------------*/
 
 /* Template default CSS
@@ -135,7 +143,7 @@ ol {
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
+	background-position: bottom center;
 }
 
 .spad {
@@ -1161,7 +1169,7 @@ ol {
 }
 
 .product__item__pic {
-	height: 360px;
+	height: 150px;
 	position: relative;
 	overflow: hidden;
 }
