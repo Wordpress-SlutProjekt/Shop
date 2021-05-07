@@ -20,19 +20,28 @@ function noob_payment_init(){
          class WC_Noob_pay_Gateway extends WC_Payment_Gateway{
               public function __construct(){
                   $this->id = "noob_payment";
+                  $this->init_form_fields();
+                  $this->init_settings();
 
                   $this->icon = apply_filters( "woocommerce_noob_icon", plugins_url("/assets/icon.png", __FILE__));
                   
-                  $this->has_fields = false;
+                  $this->has_fields = true;
+
+
                   $this->method_title = __("Payment Invoice", "noob-pay-woo");
                   $this->method_description = __("local payment system.", "noob-pay-woo");
-
+               
                   $this->title = $this->get_option("title");
                   $this->description = $this->get_option("description");
                   $this->instruction = $this->get_option("instruction");
-                  
-                  $this->init_form_fields();
-                  $this->init_settings();
+                  $this->payment_fields  = array(
+                    'order_comments' => array(
+                        'type' => 'textarea',
+                        'class' => array('notes'),
+                        'label' => __('Order Notes', 'woocommerce'),
+                        'placeholder' => _x('Notes about your order, e.g. special notes for delivery.', 'placeholder', 'woocommerce')
+                        )
+                    );
 
                   add_action( "woocommerce_update_options_payment_gateways_" . $this->id, array($this, "process_admin_option"));
 
@@ -75,19 +84,21 @@ function noob_payment_init(){
             public function process_payment( $order_id ){
                 $order = wc_get_order( $order_id );
 
-                $order->update_status( "on-hold" ,__("Awaiting Noob Payment" ,"noob-pay-woo"));
+		if ( $order->get_total() > 0 ) {
+			// Mark as processing or on-hold (payment won't be taken until delivery).
+			$order->update_status( apply_filters( 'woocommerce_cod_process_payment_order_status', $order->has_downloadable_item() ? 'on-hold' : 'processing', $order ), __( 'Payment to be made upon delivery.', 'woocommerce' ) );
+		} else {
+			$order->payment_complete();
+		}
 
-                $this->clear_payment_with_api();
+		// Remove cart.
+		WC()->cart->empty_cart();
 
-                $order->reduce_order_stock_levels();
-
-                WC()->cart->empty_cart();
-
-                return array(
-                    "result" => "successs",
-                    "redirect" => $this->get_return_url($order)
-
-                ); 
+		// Return thankyou redirect.
+		return array(
+			'result'   => 'success',
+			'redirect' => $this->get_return_url( $order ),
+		);
 
             }
 
@@ -106,3 +117,4 @@ function add_to_woo_noob_payment_gateway( $gateways ){
     return $gateways;
 
 }
+
