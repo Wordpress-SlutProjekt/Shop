@@ -1,0 +1,18 @@
+2021-05-07T06:58:13+00:00 CRITICAL Uncaught Error: Undefined constant "woocommerce_cart" in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php:8
+Stack trace:
+#0 /Users/shahinfarzane/Desktop/Shop/wp-includes/template-loader.php(106): include()
+#1 /Users/shahinfarzane/Desktop/Shop/wp-blog-header.php(19): require_once('/Users/shahinfa...')
+#2 /Users/shahinfarzane/Desktop/Shop/index.php(17): require('/Users/shahinfa...')
+#3 {main}
+  thrown in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php on line 8
+
+2021-05-07T06:59:14+00:00 CRITICAL Uncaught Error: Undefined constant "woocommerce_cart" in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php:8
+Stack trace:
+#0 /Users/shahinfarzane/Desktop/Shop/wp-includes/template-loader.php(106): include()
+#1 /Users/shahinfarzane/Desktop/Shop/wp-blog-header.php(19): require_once('/Users/shahinfa...')
+#2 /Users/shahinfarzane/Desktop/Shop/index.php(17): require('/Users/shahinfa...')
+#3 {main}
+  thrown in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php on line 8
+
+2021-05-07T12:09:59+00:00 CRITICAL syntax error, unexpected token "public", expecting end of file in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/functions.php on line 218
+
