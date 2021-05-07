@@ -79,7 +79,7 @@ function noob_payment_init(){
 
                 $this->clear_payment_with_api();
 
-                $order->reduce_order_stock_levels();
+                
 
                 WC()->cart->empty_cart();
 
