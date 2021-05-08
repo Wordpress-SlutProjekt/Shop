@@ -206,7 +206,141 @@ register_sidebar(
     }
     add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
 
-    
+
+       
+    function fd_theme_support() {
+        add_theme_support( 'woocommerce' );
+        add_theme_support( 'wc-product-gallery-zoom' );
+        add_theme_support( 'wc-product-gallery-lightbox' );
+        add_theme_support( 'wc-product-gallery-slider' );
+    }
+    add_action( 'after_setup_theme', 'fd_theme_support', 10 );
 
 
-?>
+
+
+/**
+ * @snippet       Remove Sidebar @ Single Product Page
+ * @how-to        Get CustomizeWoo.com FREE
+ * @sourcecode    https://businessbloomer.com/?p=19572
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 3.2.6
+ */
+ 
+add_action( 'wp', 'bbloomer_remove_sidebar_product_pages' );
+ 
+function bbloomer_remove_sidebar_product_pages() {
+if ( is_product() ) {
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+}
+}
+
+
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'custom-thumb', 100, 100, true ); // 100 wide and 100 high
+}
+
+
+// Removes Order Notes Title
+
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
+
+// Remove Order Notes Field
+
+add_filter( 'woocommerce_checkout_fields' , 'njengah_order_notes' );
+
+function njengah_order_notes( $fields ) {
+
+unset($fields['order']['order_comments']);
+
+return $fields;
+
+}
+
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+add_filter( 'woocommerce_cart_needs_shipping_address', '__return_false');
+add_filter( 'woocommerce_checkout_fields' , 'custom_mod_checkout_fields' ); 
+function custom_mod_checkout_fields( $fields ) { unset($fields['billing']['billing_company']); return $fields; }
+
+
+add_filter('woocommerce_checkout_fields', 'addBootstrapToCheckoutFields' );
+function addBootstrapToCheckoutFields($fields) {
+    foreach ($fields as &$fieldset) {
+        foreach ($fieldset as &$field) {
+            // if you want to add the form-group class around the label and the input
+            $field['class'][] = 'form-group'; 
+
+            // add form-control to the actual input
+            $field['input_class'][] = 'checkout__form';
+        }
+    }
+    return $fields;
+}
+
+
+
+
+add_filter('woocommerce_form_field_args','wc_form_field_args',10,3);
+
+function wc_form_field_args( $args, $key, $value = null ) {
+
+
+
+// Start field type switch case
+
+switch ( $args['type'] ) {
+
+    case "select" :  /* Targets all select input type elements, except the country and state select input types */
+        $args['class'][] = 'form-group'; // Add a class to the field's html element wrapper - woocommerce input types (fields) are often wrapped within a <p></p> tag  
+        $args['input_class'] = array('form-select', 'input-lg'); // Add a class to the form input itself
+        //$args['custom_attributes']['data-plugin'] = 'select2';
+        $args['label_class'] = array('control-label');
+        $args['custom_attributes'] = array( 'data-plugin' => 'select2', 'data-allow-clear' => 'true', 'aria-hidden' => 'true',  ); // Add custom data attributes to the form input itself
+    break;
+
+    case 'country' : /* By default WooCommerce will populate a select with the country names - $args defined for this specific input type targets only the country select element */
+        $args['class'][] = 'form-group single-country';
+        $args['label_class'] = array('control-label');
+    break;
+
+    case "state" : /* By default WooCommerce will populate a select with state names - $args defined for this specific input type targets only the country select element */
+        $args['class'][] = 'form-group'; // Add class to the field's html element wrapper 
+        $args['input_class'] = array('form-control', 'input-lg'); // add class to the form input itself
+        //$args['custom_attributes']['data-plugin'] = 'select2';
+        $args['label_class'] = array('control-label');
+        $args['custom_attributes'] = array( 'data-plugin' => 'select2', 'data-allow-clear' => 'true', 'aria-hidden' => 'true',  );
+    break;
+
+
+    case "password" :
+    case "text" :
+    case "email" :
+    case "tel" :
+    case "number" :
+        $args['class'][] = 'form-group';
+        //$args['input_class'][] = 'form-control input-lg'; // will return an array of classes, the same as bellow
+        $args['input_class'] = array('form-control', 'input-lg');
+        $args['label_class'] = array('control-label');
+    break;
+
+    case 'textarea' :
+        $args['input_class'] = array('form-control', 'input-lg');
+        $args['label_class'] = array('control-label');
+    break;
+
+    case 'checkbox' :  
+    break;
+
+    case 'radio' :
+    break;
+
+    default :
+        $args['class'][] = 'form-group';
+        $args['input_class'] = array('form-control', 'input-lg');
+        $args['label_class'] = array('control-label');
+    break;
+    }
+
+    return $args;
+}
