@@ -1,5 +1,6 @@
-<!-- Footer Section Begin -->
+
 <?php wp_footer(); ?>
+
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -9,6 +10,9 @@
                         <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
                     <div class="footer__payment">
+
+                    <div class="footer__payment no-border">
+
                     <?php dynamic_sidebar('footercolumnone') ?> 
                     </div>
                 </div>
@@ -30,6 +34,7 @@
                         <input type="text" placeholder="Email">
                         <button type="submit" class="site-btn">Subscribe</button>
                     </form>
+
                     <div class="footer__social">
                     <?php dynamic_sidebar('footercolumnfour') ?> 
                     </div>
@@ -38,13 +43,10 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 <div class="footer__copyright__text">
-                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                <?php dynamic_sidebar('footercolumnbottom') ?>     
                 </div>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>
         </div>
     </div>
 </footer>
-<!-- Footer Section End -->

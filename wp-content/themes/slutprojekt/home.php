@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); ?>
 
 <section class="blog spad">

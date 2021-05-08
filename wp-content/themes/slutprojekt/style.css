@@ -3,5 +3,6 @@ Theme Name: Slutprojekt
 Description: Tema för vårt slutprojket i Wordpress!
 */
 
-
-
+.no-border img{
+    border: 0px!important;
+}
