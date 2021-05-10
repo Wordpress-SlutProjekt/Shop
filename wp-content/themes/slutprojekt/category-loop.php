@@ -20,6 +20,11 @@ if ($product_categories) { // only start if there are some terms
                 $thumbnail_id = get_term_meta($term_id, 'thumbnail_id', true);
                 $image_cat_url = wp_get_attachment_image_src($thumbnail_id);
                 $image = wp_get_attachment_url( $thumbnail_id );
+                
+                $count = $product_category->count;
+                
+
+                
         
         
         
@@ -30,7 +35,7 @@ if ($product_categories) { // only start if there are some terms
         echo    '<div class="categories__text">';
 	    
 	    echo '<h4>'.$term_name.'</h4>'; 
-        echo '<p>260 items</p>';
+        echo '<p>'.$count.' items</p>';
         echo '<a href="'.$term_link.'">Shop Now</a>';
 
 	   
