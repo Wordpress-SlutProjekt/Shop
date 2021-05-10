@@ -13,38 +13,7 @@ Author URI: https://woocommerce.com/
  */
 
   
-function distance($customer){
-  require(__DIR__ . '/src/client.php');
-   try {
- 
-     $postnummersok = new Client();
- 
-     $postnummersok->setCustomerId(363)
-               ->setApiKey('f20018674cdab3');
- 
-     $request = [
-       'from' => [
-         'postcode' => '42676',
-         'country_code' => 'SE',
-       ],
-       'to' => [
-         'postcode' => $customer,
-         'country_code' => 'SE',
-       ],
-       'unit' => 'km',
-     ];
- 
-     $result = $postnummersok->Distance($request);
-     var_export($result);
-     return $result["road"];
- 
-   } catch(Exception $e) {
-     die('An error occured: '. $e->getMessage() . PHP_EOL . PHP_EOL
-       . $postnummersok->getLastLog());
-   }
- 
-   
-}
+require(__DIR__ . '/api.php');
 
 
 
@@ -136,13 +105,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
           $price_c = (int)$this->settings['c-class'];
           global $woocommerce;
           $postal_code = $package[ 'destination' ][ 'postcode' ];
-          echo $postal_code.'</br>';
+          
         
           
-//echo distance($postal_code). ' km';
+
 $distance_cost=(float)$this->settings['distance'];
 echo 'distans '.$distance_cost*(3).'</br>';
-//$distance_price=$distance_cost+distance($postal_code);
+$distance_price=$distance_cost+distance($postal_code);
 
 
 $items = $woocommerce->cart->get_cart();
@@ -168,7 +137,7 @@ foreach($items as $item => $values) {
             $price_array+=$price_c*$values['quantity'];
         }
     } 
-    //$shipping_cost=$price_array+$weight_array+$distance_price;
+    $shipping_cost=$price_array+$weight_array+$distance_price;
     
 
 
