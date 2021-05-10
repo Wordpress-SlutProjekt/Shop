@@ -138,16 +138,17 @@ register_sidebar(
 
     add_action( 'wp_enqueue_scripts', 'css_files');
 
+
     function js_files(){
-        wp_enqueue_script('bootsstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js ', array(), 1, 'all');
+        wp_enqueue_script('bootsstrap.min', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js', array(), 1, 'all');
         // wp_enqueue_script('jquery.min', get_template_directory_uri() . '/js/jquery-3.3.1.min.js ', array(), 1, 'all');
-        wp_enqueue_script('jquery-ui.min', get_template_directory_uri() . '/js/jquery-ui.min.js ', array(), 1, 'all');
-        wp_enqueue_script('jquery.count.min', get_template_directory_uri() . '/js/jquery.countdown.min.js ', array(), 1, 'all');
-        wp_enqueue_script('magnific.min', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js ', array(), 1, 'all');
-        wp_enqueue_script('nicescroll.min', get_template_directory_uri() . '/js/jquery.nicescroll.min.js ', array(), 1, 'all');
-        wp_enqueue_script('slicknav.min', get_template_directory_uri() . '/js/jquery.slicknav.js ', array(), 1, 'all');
-        wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js ', array(), 1, 'all');
-        wp_enqueue_script('mix', get_template_directory_uri() . '/js/mixitup.min.js ', array(), 1, 'all');
+        wp_enqueue_script('jquery-ui.min', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', array(), 1, 'all');
+        wp_enqueue_script('jquery.count.min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js', array(), 1, 'all');
+        wp_enqueue_script('magnific.min', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array(), 1, 'all');
+        wp_enqueue_script('nicescroll.min','https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js', array(), 1, 'all');
+        wp_enqueue_script('slicknav.min', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js', array(), 1, 'all');
+        wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), 1, 'all');
+        wp_enqueue_script('mix', get_template_directory_uri() . '/js/mixitup.min.js', array(), 1, 'all');
         wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.min.js');
 
         wp_enqueue_script( 'popper-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' ); 
@@ -156,7 +157,6 @@ register_sidebar(
 
     }
     add_action('wp_enqueue_scripts', 'js_files');
-
 
 
 
