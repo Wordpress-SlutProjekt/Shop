@@ -29,3 +29,9 @@ Day6 :
 Cart page design done, 
 My Account page design done,
 Checkout page design started.
+
+Day7:
+Checkout page design done,
+Style updated to the cart page and shop page done.
+updated the products in the databse
+imported widgets and posts in the database.
