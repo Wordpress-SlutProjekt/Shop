@@ -15,10 +15,10 @@ $query = new WP_Query( array(
             $categories = array();
             if ($query->have_posts()){
             while ( $query->have_posts() ) : $query->the_post(); 
-                        
+                      
                             
                             $product = wc_get_product( get_the_ID() );
-                            $price = $product->get_price();
+                            $price = $product->get_price().' kr';
                             $thumb_id = get_post_thumbnail_id();
                             $thumb_url = wp_get_attachment_image_src($thumb_id,'medium', true);
                             
@@ -40,7 +40,7 @@ $query = new WP_Query( array(
                             
                             echo '</div>';
                             echo  '<div class="product__item__text">';
-                            echo '<h6><a href="'.get_the_permalink().'">titel'.the_title().'</a></h6>';
+                            echo '<h6><a href="'.get_the_permalink().'">'.the_title().'</a></h6>';
                             echo '<div class="product__price">'.$price.'</div>';
                             echo '</div>';
                             echo '</div>';

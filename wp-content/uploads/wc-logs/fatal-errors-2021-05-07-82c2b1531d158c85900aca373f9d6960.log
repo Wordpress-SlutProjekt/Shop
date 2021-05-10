@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-2021-05-07T06:58:13+00:00 CRITICAL Uncaught Error: Undefined constant "woocommerce_cart" in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php:8
-Stack trace:
-#0 /Users/shahinfarzane/Desktop/Shop/wp-includes/template-loader.php(106): include()
-#1 /Users/shahinfarzane/Desktop/Shop/wp-blog-header.php(19): require_once('/Users/shahinfa...')
-#2 /Users/shahinfarzane/Desktop/Shop/index.php(17): require('/Users/shahinfa...')
-#3 {main}
-  thrown in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php on line 8
-
-2021-05-07T06:59:14+00:00 CRITICAL Uncaught Error: Undefined constant "woocommerce_cart" in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php:8
-Stack trace:
-#0 /Users/shahinfarzane/Desktop/Shop/wp-includes/template-loader.php(106): include()
-#1 /Users/shahinfarzane/Desktop/Shop/wp-blog-header.php(19): require_once('/Users/shahinfa...')
-#2 /Users/shahinfarzane/Desktop/Shop/index.php(17): require('/Users/shahinfa...')
-#3 {main}
-  thrown in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/page-cart.php on line 8
-
-2021-05-07T12:09:59+00:00 CRITICAL syntax error, unexpected token "public", expecting end of file in /Users/shahinfarzane/Desktop/Shop/wp-content/themes/slutprojekt/functions.php on line 218
-=======
 2021-05-07T07:05:32+00:00 CRITICAL Uncaught Error: Call to undefined method Automattic\WooCommerce\Admin\Overrides\Order::reduce_order_stock_levels() in /Users/shahin/Repo/Shop/wp-content/plugins/noob-payment-woocommerce/noob-payment-woocommerce.php:82
 Stack trace:
 #0 /Users/shahin/Repo/Shop/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(971): WC_Noob_pay_Gateway->process_payment(241)
@@ -46,5 +27,4 @@ Stack trace:
 #4 /Users/shahin/Repo/Shop/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
 #5 /Users/shahin/Repo/Shop/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
 #6 /Users/shahin/Repo/Shop/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(90): do_action('wc_ajax_checkou. in /Users/shahin/Repo/Shop/wp-content/plugins/noob-payment-woocommerce/noob-payment-woocommerce.php on line 82
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 
