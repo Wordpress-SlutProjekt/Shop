@@ -53,7 +53,7 @@
     <div class="section-title">
                     <h4>Fetured products</h4>
                 </div>
-    <?php echo do_shortcode("[wcpcsu id='201']"); ?>
+                <?php echo do_shortcode("[wcpcsu id='316']"); ?>
     </div>
 </section>
 <!-- Banner Section End -->

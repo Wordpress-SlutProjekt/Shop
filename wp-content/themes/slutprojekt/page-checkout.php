@@ -1,29 +1,24 @@
-<!-- Template Name: checkout
--->
-
-<?php get_header(); ?>
+<?php get_header();?>
 <?php wp_head(); ?>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <?php 
+                    while(have_posts()) {
+                        the_post();
+                ?>
+                    <br><br>
+                <h1><?php the_title();?></h1>
+                
+                <?php the_content();?>
+                <?php
+                  } 
+                ?>
+       
+            </div>
+        </div>
+</div>
+</section>
 
-        
-
-        <?php
-  while(have_posts()){
-    the_post();
-    ?>
- 
-
- <section class="checkout spad">
-        <div class="container">
-      <?php the_content(); ?>
-    </div>
-
-
-    <?php } ?>
- </section>        <!-- Checkout Section End -->
-
- <?php
-get_footer();
-?>
-
-<?php
-wp_footer();
+<?php get_footer() ?>

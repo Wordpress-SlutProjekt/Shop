@@ -1,3 +1,4 @@
+<!-- Footer Section Begin -->
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -36,9 +37,6 @@
         </div>
     </div>
 </footer>
-
-<?php 
-	 wp_footer(); 
-?>
-</body>
-</html>
+<!-- Footer Section End -->
+<?php
+wp_footer();
