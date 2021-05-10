@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_projekt_grupp1' );
+define( 'DB_NAME', 'slutprojekt4' );
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
@@ -46,14 +46,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'y81<gd~*aT0W=;tF9}U1x@~kjJ6zQ)v3qv]|9Gm_+LuBw[=DJ?G;FBKY1>w~%nnK' );
-define( 'SECURE_AUTH_KEY',  'l^=!?ej.XJl:py^xuhXj6QOu}`&Ht2HDD/#uiGh#YJke<cJ.Ut#F]T,tCzKSyc+Z' );
-define( 'LOGGED_IN_KEY',    'Q9I`sQtAPK!ha$@Cfj:%&4%+2L]ptS{WH^+QR=u_(:oMEV4L/SnYCs0,,*y^(tpp' );
-define( 'NONCE_KEY',        '_jvkeN$^|V1g 3|[RnA%<;Fu?X@c=*mf=fp>%.hmDShprA3u_%EpfYSLf@a f2AU' );
-define( 'AUTH_SALT',        ')W]r];5V:K@7%0UM]yLVriL8%IRb/m+cDSXU0)o5O>DH<7qD -[#,l=Ny%r5tiuu' );
-define( 'SECURE_AUTH_SALT', '^*;],p*sb8_u-y^!b#*8,f%fxCx*[}u?S*[s*.@6gKHQ 4.&hftX4KG9^]Buk2ij' );
-define( 'LOGGED_IN_SALT',   'Z.9ASq=lwgWV_!qlxh6/t>6@Ct{y:@D:t[0KmkhBIFME{9LiO}=lZ[5^:{k.TsPJ' );
-define( 'NONCE_SALT',       'bICn8cV7K5mKw+FFML]b}hDSJr2?*DM3b[AczHViRqLK>(Dg8&MZ~+?$`!oa5rej' );
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
 
 /**#@-*/
 //
@@ -77,7 +77,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 
 /* That's all, stop editing! Happy publishing. */
 
