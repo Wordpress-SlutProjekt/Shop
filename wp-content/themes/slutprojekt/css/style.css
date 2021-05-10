@@ -26,6 +26,14 @@
 10.  Footer Style
 -------------------------------------------------------------------*/
 
+
+/* custom css */
+
+.section-cart {
+	margin-top: 50px;
+}
+
+
 /*----------------------------------------*/
 
 /* Template default CSS
@@ -86,44 +94,7 @@ p {
 img {
 	max-width: 100%;
 }
-<<<<<<< HEAD
-.carttext {
-	color: #111111;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-}
 
-.ac{
-	text-decoration: none;
-	
-	font-size: 14px!important;
-	color: #ffffff!important;
-	background: #ca1515!important;
-	font-weight: 600!important;
-
-}
-
-.nolink{
-	text-decoration: none;
-	color: #111111;
-	font-weight: 600;
-
-}
-
-.itemc{
-	color: #111111;
-	font-weight: 600;
-}
-.cart-img {
-		float: none;
-		margin-right: 0;
-		height: 90px;
-		width:90px;
-	}
-=======
-
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 input:focus,
 select:focus,
 button:focus,
@@ -131,23 +102,6 @@ textarea:focus {
 	outline: none;
 }
 
-<<<<<<< HEAD
-.btnx {
-	display: inline-block!important;
-	font-size: 14px!important;
-	color: #ffffff!important;
-	background: #ca1515!important;
-	font-weight: 600!important;
-	text-transform: uppercase!important;
-	padding: 14px 30px 15px!important;
-	border-radius: 50px!important;
-	float: left!important;
-	margin-right: 10px!important;
-	margin-bottom: 10px!important;
-	
-}
-=======
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 a:hover,
 a:focus {
 	text-decoration: none;
@@ -189,7 +143,7 @@ ol {
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
+	background-position: bottom center;
 }
 
 .spad {
@@ -698,16 +652,6 @@ ol {
 	height: 100%;
 }
 
-<<<<<<< HEAD
-.amount{
-	color:#000;
-
-
-
-
-}
-=======
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 .discount__text {
 	background: #f4f4f4;
 	height: 390px;
@@ -814,11 +758,6 @@ ol {
   Services
 -----------------------*/
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 .services {
 	padding-top: 80px;
 	padding-bottom: 50px;
@@ -1121,11 +1060,6 @@ ol {
 	margin-right: 10px;
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 .categories__item.categories__large__item {
 	height: 638px;
 	padding-left: 70px;
@@ -1235,7 +1169,7 @@ ol {
 }
 
 .product__item__pic {
-	height: 360px;
+	height: 150px;
 	position: relative;
 	overflow: hidden;
 }
@@ -1321,13 +1255,9 @@ ol {
 .product__hover li a {
 	font-size: 18px;
 	color: #111111;
-<<<<<<< HEAD
-	display: block;
-=======
 	display: flex;
 	justify-content: center;
 	align-items: center;
->>>>>>> 518e7f749a0816ae36de7991e7083ed2e0335f5c
 	height: 45px;
 	width: 45px;
 	background: #ffffff;
