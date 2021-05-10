@@ -32,8 +32,8 @@
                     <div class="header__right">
                     <?php dynamic_sidebar('search_bar') ?> 
                         <div class="header__right__auth">
-                            <!-- <a href="#">Login</a>
-                            <a href="#">Register</a> -->
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
                         </div>
                         <ul class="header__right__widget">
                             
