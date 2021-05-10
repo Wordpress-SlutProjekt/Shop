@@ -165,13 +165,6 @@ register_sidebar(
 
 
 
-    // function my_acf_google_map_api( $api ){
-    //     $api['AIzaSyBh3p65wVsOQhCGlnsO8uXpghP9aSy0KV4'] = 'xxx';
-    //     return $api;
-    // }
-    // add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-
-
     function fix_gmaps_api_key() {
         if(mb_strlen(acf_get_setting("google_api_key")) <= 0){
             acf_update_setting("google_api_key", "AIzaSyBh3p65wVsOQhCGlnsO8uXpghP9aSy0KV4");
@@ -207,7 +200,4 @@ register_sidebar(
     add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
 
     
-
-
-?>
 
