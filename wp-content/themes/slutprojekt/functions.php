@@ -411,3 +411,45 @@ function add_additional_class_on_li($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Stores.
+	 */
+
+	$labels = [
+		"name" => __( "Stores", "custom-post-type-ui" ),
+		"singular_name" => __( "Store", "custom-post-type-ui" ),
+		"menu_name" => __( "Our stores", "custom-post-type-ui" ),
+		"add_new" => __( "Add new store", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => __( "Stores", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "Add new storelocations",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "stores", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "stores", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
