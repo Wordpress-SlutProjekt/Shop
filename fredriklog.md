@@ -33,8 +33,11 @@ Fredrik Ljungqvist
 * Jobbar på med noob-payment
 * sitter uppe till fem och kapar nya cloner av sidan som är i en blanding av git och plugin-hell
 * får klart plugin 2
+2021-05-12
+* Börjat jobba med cat-plugin
 2021-05-14
 * Får i uppdrag att fixa det sista med sidan
 * Får göra om blogposter
 * Fixa med bilder etc.
+* Fick ej klart cat-plugin i tid...
 
