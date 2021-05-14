@@ -127,8 +127,8 @@ register_sidebar(
         wp_register_style('magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css', array(), '1.1', 'all');
         wp_enqueue_style('magnific-popup');
         
-        wp_register_style('owl.carousel', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
-        wp_enqueue_style('owl.carousel.min');
+        //wp_register_style('owl.carousel', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.1', 'all');
+        //wp_enqueue_style('owl.carousel.min');
 
 
         
@@ -143,13 +143,13 @@ register_sidebar(
         wp_enqueue_script('bootsstrap.min', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js', array(), 1, 'all');
         // wp_enqueue_script('jquery.min', get_template_directory_uri() . '/js/jquery-3.3.1.min.js ', array(), 1, 'all');
         wp_enqueue_script('jquery-ui.min', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', array(), 1, 'all');
-        wp_enqueue_script('jquery.count.min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js', array(), 1, 'all');
+        //wp_enqueue_script('jquery.count.min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js', array(), 1, 'all');
         wp_enqueue_script('magnific.min', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array(), 1, 'all');
         wp_enqueue_script('nicescroll.min','https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js', array(), 1, 'all');
         wp_enqueue_script('slicknav.min', 'https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js', array(), 1, 'all');
         wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), 1, 'all');
         wp_enqueue_script('mix', get_template_directory_uri() . '/js/mixitup.min.js', array(), 1, 'all');
-        wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.min.js');
+        //wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.min.js');
 
         wp_enqueue_script( 'popper-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' ); 
 
