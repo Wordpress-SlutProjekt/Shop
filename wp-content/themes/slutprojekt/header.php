@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon" />
 	<title><?php wp_title(' - ',TRUE,'right'); bloginfo('name'); ?></title>
 	<?php wp_head(); ?>
 </head>
